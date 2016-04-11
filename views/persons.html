@@ -1,0 +1,62 @@
+<div class="persons-view" ng-controller="personsCtrl">
+  <div class="add"><button type="button" data-toggle="modal" data-target="#myModal">Add</button></div>
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <form role="form" class="simple-form">
+            <div class="form-group form-inline">
+              <label>Name:</label>
+              <input type="text" class="form-control" ng-model="person.name" required>
+            </div>
+            <div class="form-group form-inline">
+              <label>Job title:</label>
+              <input type="text" class="form-control" ng-model="person.job"/>
+            </div>
+            <div class="form-group form-inline">
+              <label>Age:</label>
+              <input type="number" min="14" max="120" integer class="form-control" ng-model="person.age" required />
+            </div>
+            <div class="form-group form-inline">
+              <label>Nickname:</label>
+              <input type="text" class="form-control" ng-model="person.nick"/>
+            </div>
+            <div class="form-group form-inline">
+              <label>Employee:</label>
+              <input type="checkbox" ng-model="person.employee"  ng-init="person.employee=true"/>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" ng-click="addPerson(person)" data-dismiss="modal">Ok</button>
+          <button type="button" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>  
+    </div>
+  </div>
+  
+  <table>
+    <thead>
+      <tr>
+        <th class="name">Name<br>(job title)</th>
+        <th class="age">Age</th>
+        <th class="nick">Nickname</th>
+        <th class="employee">Employee</th>
+        <th class="delete"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="person in persons">
+        <td class="name">{{person.name}}<br>{{person.job}}</td>
+        <td class="age">{{person.age}}</td>
+        <td class="nick">{{person.nick}}</td>
+        <td class="employee">{{isEmployee(person)}}</td>
+        <td class="delete" ng-click="remove(person)">Delete</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="datadump">
+    <p>Data dump</p>
+    <textarea id="mytextarea" rows="6"></textarea>
+  </div>
+</div>

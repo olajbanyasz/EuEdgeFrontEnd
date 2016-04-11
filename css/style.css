@@ -1,0 +1,156 @@
+html {
+    --primary-color: #37b878;
+    --border-color: #000;
+    --delete-color: darkblue;
+    --text-color: #666;
+    --header-color: #000;
+    --table-divider-color: #ded;
+}
+
+body {
+  color: var(--text-color);
+  font-family: 'Boogaloo', cursive;
+  margin: 0;
+}
+
+header {
+  border-bottom: 5px solid var(--primary-color);
+  color: var(--header-color);
+  outline: none;
+  width: 100%;
+}
+
+header ul {
+  display: inline-block;
+  padding: 0;
+}
+
+header img {
+  height: 35px;
+  margin: 20px 20px 20px 0;
+  vertical-align: middle;
+}
+
+.main-menu li {
+  display: inline-block; 
+}
+
+.main-menu a {
+  color: var(--text-color);
+  display: inline-block;
+  font-weight: bolder;
+  text-decoration: none;
+  width: auto; 
+}
+
+.selected-route {
+  box-shadow: 0px 2px #37b878; 
+}
+
+.main-menu, table, .add, .datadump {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.add {
+  margin-top: 10px;
+  text-align: left;
+}
+
+button {
+  box-shadow: 1px 2px #37b878; 
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th {
+  border: 1px solid var(--border-color);
+}
+
+td {
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+}
+
+th {
+  background-color: var(--table-divider-color);
+  color: var(--header-color);
+}
+
+tbody tr:nth-child(2n) {
+  background-color: var(--table-divider-color);
+}
+
+.name {
+  padding-left: 5px;
+  text-align: left;
+}
+
+.age {
+  padding-right: 5px;
+  text-align: right;
+}
+
+.nick {
+  padding-left: 5px;
+  text-align: left;
+}
+
+.employee, .delete {
+  text-align: center;
+}
+
+.delete {
+  color: var(--delete-color);
+  text-decoration: underline;
+}
+
+.delete:hover {
+  text-shadow: 1px 0px var(--delete-color);
+}
+
+.modal-footer {
+  text-align: center;
+}
+
+.form-inline .form-control {
+  width: 80%;
+}
+
+.form-inline label {
+  width: 15%;
+}
+
+button {
+  outline: none;
+}
+
+.datadump{
+  margin: 20px auto;
+}
+
+#mytextarea {
+  border-color: var(--border-color);
+  outline: none;
+  width: 100%;
+}
+
+.graph-view {
+  margin: 0 auto;
+}
+
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 100px auto 20px auto;
+    display: block;
+    height: 300px;
+    width: 60%;
+}
+
+.chart-legend li, .bar-legend li, .line-legend li, .pie-legend li, .radar-legend li, .polararea-legend li, .doughnut-legend li {
+  font-size: 200%;
+}
